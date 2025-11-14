@@ -59,6 +59,19 @@ nav ul li {
     margin: 0 15px;
 }
 
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-dark-gray);
+    font-weight: 500;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
 /* Hamburger menu styles */
 .hamburger {
     display: none; /* Hidden by default on desktop */
@@ -111,50 +124,6 @@ nav ul li {
 
 .hamburger.active .hamburger-icon::after {
     transform: translateY(-10px) rotate(-45deg);
-}
-
-/* Responsive Design */
-/* Mobile devices (320px - 767px) */
-@media (max-width: 767px) {
-    .hamburger {
-        display: block; /* Show hamburger on mobile */
-    }
-
-    nav ul.nav-links {
-        display: none; /* Hide nav links by default on mobile */
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px; /* Adjust based on header height */
-        left: 0;
-        background-color: var(--background-white);
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        padding: 20px 0;
-    }
-
-    nav ul.nav-links.active {
-        display: flex; /* Show nav links when active */
-    }
-
-    nav ul.nav-links li {
-        margin: 10px 0;
-    }
-
-    header {
-        position: relative; /* Allow absolute positioning of hamburger */
-    }
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--text-dark-gray);
-    font-weight: 500;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: var(--primary-color);
 }
 
 /* Main Content */
@@ -678,16 +647,34 @@ footer {
 /* Responsive Design */
 /* Mobile devices (320px - 767px) */
 @media (max-width: 767px) {
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
     }
 
-    nav ul li {
+    nav ul.nav-links {
+        display: none; /* Hide nav links by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background-color: var(--background-white);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 20px 0;
+    }
+
+    nav ul.nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    nav ul.nav-links li {
         margin: 10px 0;
     }
 
+    header {
+        position: relative; /* Allow absolute positioning of hamburger */
+    }
+    
     h1 { font-size: 2em; }
     h2 { font-size: 1.7em; }
     h3 { font-size: 1.3em; }
