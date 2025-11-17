@@ -242,8 +242,9 @@ p {
     background-color: var(--background-white);
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
-    padding: 8px 0;
+    padding: 8px 15px;
     font-size: 0.9em;
+    margin-left: 0;
 }
 
 .tertiary-btn:hover {
